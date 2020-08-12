@@ -100,17 +100,17 @@ class member
                 }
                 else if(cur_mon_red<=200)
                 {
-                    System.out.println("Total Electricity Bill="+(100*2)+(cur_mon_red-100)*5.50);
+                    System.out.println("Total Electricity Bill="+(100*3)+(cur_mon_red-100)*5.50);
                     break;
                 }
                 else if(cur_mon_red<=500)
                 {
-                    System.out.println("Total Electricity Bill="+(100*2)+(100*3.50)+(cur_mon_red-200)*7);
+                    System.out.println("Total Electricity Bill="+(100*3)+(100*5.50)+(cur_mon_red-200)*7);
                     break;
                 }
                 else if(cur_mon_red>500)
                 {
-                    System.out.println("Total Electricity Bill="+(100*2)+(100*3.50)+(200*5)+(cur_mon_red-400)*8);
+                    System.out.println("Total Electricity Bill="+(100*3)+(100*5.50)+(200*7)+(cur_mon_red-400)*8);
                     break;
                 }
             default:
