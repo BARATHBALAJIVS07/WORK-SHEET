@@ -5,9 +5,9 @@
  */
 package lab10;
 
-import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  *
@@ -20,14 +20,23 @@ public class characterstream {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-      BufferedReader br=new BufferedReader(new
-      InputStreamReader(System.in));
-      System.out.println("Enter your name: ");
-      String name=br.readLine();
-      if(name.length()<=0)
-         System.out.println("Name cannot be empty");
-      else
-         System.out.println("Hi! "+name);
+        FileReader r=NULL;
+        FileWriter w=NULL;
+        try{
+            r=new FileReader("C:\\Users\\user\\Documents\\NetBeansProjects\\lab10\\src\\lab10\\input.jpg");
+            w=new FileWriter("C:\\Users\\user\\Documents\\NetBeansProjects\\lab10\\src\\lab10\\output.jpg");
+            int c;
+            while ((c=read())!=-1){
+                w.write(c);
+            }
+        }finally{
+            if(r!=NULL){
+                r.close();
+            }
+            if(w!=NULL){
+                w.close();
+            }
+        }
     }
     
 }
