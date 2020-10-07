@@ -5,13 +5,12 @@
  */
 package lab10;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-
 /**
  *
- * @author barathbalaji
+ * @author barathbalajivs
  */
 public class bytestream {
 
@@ -20,18 +19,19 @@ public class bytestream {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        BufferedInputStream read = new BufferedInputStream(System.in);
-        try {
-            System.out.print("Enter any character: ");
-            char c = (char)read.read();
-            System.out.println("You have entered '" + c + "'");
-        }
-	catch(Exception e) {
-            System.out.println(e);
-        }
-        finally {
-            read.close();
-        }
+        FileInputStream f= null;   
+       FileOutputStream f1=null;
+        {
+        f= new FileInputStream("C:\\Users\\user\\Documents\\NetBeansProjects\\lab10\\src\\lab10\\input.jpg");
+         f1=new FileOutputStream("C:\\Users\\user\\Documents\\NetBeansProjects\\lab10\\src\\lab10\\output.jpg");
+         int b;
+         while((b=f.read())!=-1)
+         {
+             f1.write(b);
+         }
+         f1.close();
+             
+         }
         }
     }
     
