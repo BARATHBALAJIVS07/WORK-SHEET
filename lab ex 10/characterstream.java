@@ -11,7 +11,7 @@ import java.io.IOException;
 
 /**
  *
- * @author barathbalaji
+ * @author barathbalajivs
  */
 public class characterstream {
 
